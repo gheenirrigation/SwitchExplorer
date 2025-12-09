@@ -1,6 +1,6 @@
 # SwitchExplorer
 
-[![image](https://github.com/LesFerch/WinSetView/assets/79026235/0188480f-ca53-45d5-b9ff-daafff32869e)Download the zip file](https://github.com/LesFerch/SwitchExplorer/releases/download/2.1.0/SwitchExplorer.zip)
+[![image](https://github.com/LesFerch/WinSetView/assets/79026235/0188480f-ca53-45d5-b9ff-daafff32869e)Download the zip file](https://github.com/LesFerch/SwitchExplorer/releases/download/2.2.0/SwitchExplorer.zip)
 
 ## How to Download and Run
 
@@ -15,7 +15,7 @@
 
 ## Switch the Windows 11 default Explorer and Context Menu
 
-![image](https://github.com/LesFerch/SwitchExplorer/assets/79026235/b2a47468-4b91-48fd-94d3-cfdc2c659e0b)
+![image](https://github.com/user-attachments/assets/b2718f18-4c5c-41a9-b9a3-ce2deb345cdc)
 
 With this tool you can:
 
@@ -26,17 +26,24 @@ Of course, you can also use the tool to undo the changes and switch back to the 
 
 SwitchExplorer does not install any software. It only sets some user profile registry entries and closes Explorer windows (so the change can take effect). It can be used by both Standard and Administrator users and can be run from a flash drive. There is nothing to install. Just download and run.
 
-Usage:
+### Usage
   
-GUI: Double-click the app to use the interface to select your desired Explorer and Context menu options.
+**GUI**
 
-Command line: SwitchExplorer [/e10] [/e11] [/c10] [/c11] [/x]
+Double-click the app to use the interface to select your desired Explorer and Context menu options.
+
+Check the `Restart Explorer` option if Explorer doesn't switch or doesn't switch cleanly (e.g. some display elements are blank).
+
+**Command line**
+
+SwitchExplorer [/e10] [/e11] [/c10] [/c11] [/x]
 
 `/e10`  Select the Windows 10 Explorer\
 `/e11`  Select the Windows 11 Explorer\
 `/c10`  Select the Windows 10 context menu\
 `/c11`  Select the Windows 11 context menu\
-`/x`    Do not close Explorer windows
+`/x`    Do not close Explorer windows\
+`/r`    Restart Explorer (overrides `/x`)
 
 **Note**: The `/x` option is typcially used when running this tool as part of a configuration script where you will be sigining out/in or restarting anyhow.
 
@@ -51,6 +58,8 @@ The Explorer and context menu changes are accomplished by applying or removing t
 ![image](https://github.com/LesFerch/SwitchExplorer/assets/79026235/9f768e17-a9d3-494e-9c9c-cc0161394c7e)
 
 **Note**: SwitchExplorer.exe requires Windows 11 22H2 build 3007 or higher.
+
+**Note**: The Windows 10 Explorer is required for the option `Also apply this template to all subfolders` to work correctly. If you switch back to the Windows 11 Explorer, that feature is completely broken. You must continue to use the Windows 10 Explorer for that folder setting to remain in effect.
 
 **Note**: When switched to the Windows 10 Explorer, the Details pane will still be the new Windows 11 version. If you want to get the old Details pane, that allows direct editing of metadata, you can do that by using the [OldExplorer](https://lesferch.github.io/OldExplorer) tool or by enabling the Windows 7 style details pane using **OldNewExplorer** (see below).
 
@@ -78,10 +87,3 @@ Thanks to user Garlin at elevenforum.com for streamlining the registry entries t
 \
 \
 [![image](https://github.com/LesFerch/WinSetView/assets/79026235/63b7acbc-36ef-4578-b96a-d0b7ea0cba3a)](https://github.com/LesFerch/SwitchExplorer)
-
-
-
-
-
-
-
